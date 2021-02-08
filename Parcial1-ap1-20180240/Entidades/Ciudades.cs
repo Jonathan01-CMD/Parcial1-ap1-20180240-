@@ -5,10 +5,10 @@ using System.Text;
 
 namespace Parcial1_ap1_20180240.Entidades
 {
-    class Registro
+    public class Ciudades
     {
         [Key]
-        public string Ciudad { get; set; }
-        public int id { get; set; }
+        public int CiudadId { get; set; }
+        public string NombreCiudad { get; set; }
     }
 }
