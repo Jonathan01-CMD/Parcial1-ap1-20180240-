@@ -9,6 +9,6 @@ namespace Parcial1_ap1_20180240.Entidades
     {
         [Key]
         public string Ciudad { get; set; }
-
+        public int id { get; set; }
     }
 }
