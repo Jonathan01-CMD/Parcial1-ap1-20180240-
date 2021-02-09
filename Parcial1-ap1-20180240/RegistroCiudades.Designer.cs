@@ -33,13 +33,13 @@ namespace Parcial1_ap1_20180240
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCiudad));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
+            this.NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.BotonEliminar = new System.Windows.Forms.Button();
             this.BotonGuardar = new System.Windows.Forms.Button();
             this.BotonNuevo = new System.Windows.Forms.Button();
             this.NombreCiudad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
-            this.NumericUpDown = new System.Windows.Forms.NumericUpDown();
             this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).BeginInit();
@@ -71,6 +71,13 @@ namespace Parcial1_ap1_20180240
             this.groupBox1.Size = new System.Drawing.Size(340, 284);
             this.groupBox1.TabIndex = 1;
             this.groupBox1.TabStop = false;
+            // 
+            // NumericUpDown
+            // 
+            this.NumericUpDown.Location = new System.Drawing.Point(6, 87);
+            this.NumericUpDown.Name = "NumericUpDown";
+            this.NumericUpDown.Size = new System.Drawing.Size(31, 23);
+            this.NumericUpDown.TabIndex = 8;
             // 
             // BotonEliminar
             // 
@@ -138,13 +145,7 @@ namespace Parcial1_ap1_20180240
             this.BotonBuscar.Text = "BUSCAR";
             this.BotonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BotonBuscar.UseVisualStyleBackColor = true;
-            // 
-            // NumericUpDown
-            // 
-            this.NumericUpDown.Location = new System.Drawing.Point(6, 87);
-            this.NumericUpDown.Name = "NumericUpDown";
-            this.NumericUpDown.Size = new System.Drawing.Size(31, 23);
-            this.NumericUpDown.TabIndex = 8;
+            this.BotonBuscar.Click += new System.EventHandler(this.BotonBuscar_Click);
             // 
             // errorProvider1
             // 

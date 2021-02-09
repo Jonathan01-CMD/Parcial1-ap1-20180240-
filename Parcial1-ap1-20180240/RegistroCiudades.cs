@@ -94,5 +94,27 @@ namespace Parcial1_ap1_20180240
             }
             return pasos;
         }
+
+        private void BotonBuscar_Click(object sender, EventArgs e)
+        {
+            int id;
+
+            Ciudades ciudades = new Ciudades();
+            int.TryParse(NumericUpDown.Text, out id);
+
+            Limpiar();
+
+            ciudades = CiudadBLL.Buscar(id);
+
+            if(ciudades!=null)
+            {
+                MessageBox.Show("Ciudad encontrada");
+                LlenarCampo(ciudades);
+            }
+            else
+            {
+                MessageBox.Show("Ciudad no esta en base de datos");
+            }
+        }
     }
 }
