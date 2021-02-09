@@ -83,7 +83,7 @@ namespace Parcial1_ap1_20180240.BLL
             }
             return paso;
         }
-        public static Contexto Buscar(int id)
+        public static Ciudades Buscar(int id)
         {
             Contexto contexto = new Contexto();
             Ciudades ciudade;
