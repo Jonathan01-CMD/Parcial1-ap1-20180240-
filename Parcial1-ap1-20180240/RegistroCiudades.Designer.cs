@@ -29,6 +29,7 @@ namespace Parcial1_ap1_20180240
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(RegistroCiudad));
             this.label1 = new System.Windows.Forms.Label();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
@@ -38,8 +39,11 @@ namespace Parcial1_ap1_20180240
             this.NombreCiudad = new System.Windows.Forms.TextBox();
             this.label2 = new System.Windows.Forms.Label();
             this.BotonBuscar = new System.Windows.Forms.Button();
-            this.NumeroCiudad = new System.Windows.Forms.TextBox();
+            this.NumericUpDown = new System.Windows.Forms.NumericUpDown();
+            this.errorProvider1 = new System.Windows.Forms.ErrorProvider(this.components);
             this.groupBox1.SuspendLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -50,18 +54,17 @@ namespace Parcial1_ap1_20180240
             this.label1.Size = new System.Drawing.Size(58, 15);
             this.label1.TabIndex = 0;
             this.label1.Text = "Ciudad Id";
-            this.label1.Click += new System.EventHandler(this.label1_Click);
             // 
             // groupBox1
             // 
             this.groupBox1.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.groupBox1.Controls.Add(this.NumericUpDown);
             this.groupBox1.Controls.Add(this.BotonEliminar);
             this.groupBox1.Controls.Add(this.BotonGuardar);
             this.groupBox1.Controls.Add(this.BotonNuevo);
             this.groupBox1.Controls.Add(this.NombreCiudad);
             this.groupBox1.Controls.Add(this.label2);
             this.groupBox1.Controls.Add(this.BotonBuscar);
-            this.groupBox1.Controls.Add(this.NumeroCiudad);
             this.groupBox1.Controls.Add(this.label1);
             this.groupBox1.Location = new System.Drawing.Point(12, 12);
             this.groupBox1.Name = "groupBox1";
@@ -75,11 +78,12 @@ namespace Parcial1_ap1_20180240
             this.BotonEliminar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
             this.BotonEliminar.Location = new System.Drawing.Point(206, 220);
             this.BotonEliminar.Name = "BotonEliminar";
-            this.BotonEliminar.Size = new System.Drawing.Size(85, 44);
+            this.BotonEliminar.Size = new System.Drawing.Size(89, 44);
             this.BotonEliminar.TabIndex = 7;
-            this.BotonEliminar.Text = "Nuevo";
+            this.BotonEliminar.Text = "Eliminar";
             this.BotonEliminar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BotonEliminar.UseVisualStyleBackColor = true;
+            this.BotonEliminar.Click += new System.EventHandler(this.BotonEliminar_Click);
             // 
             // BotonGuardar
             // 
@@ -105,6 +109,7 @@ namespace Parcial1_ap1_20180240
             this.BotonNuevo.Text = "Nuevo";
             this.BotonNuevo.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BotonNuevo.UseVisualStyleBackColor = true;
+            this.BotonNuevo.Click += new System.EventHandler(this.BotonNuevo_Click);
             // 
             // NombreCiudad
             // 
@@ -126,7 +131,7 @@ namespace Parcial1_ap1_20180240
             // 
             this.BotonBuscar.Image = ((System.Drawing.Image)(resources.GetObject("BotonBuscar.Image")));
             this.BotonBuscar.ImageAlign = System.Drawing.ContentAlignment.MiddleLeft;
-            this.BotonBuscar.Location = new System.Drawing.Point(142, 69);
+            this.BotonBuscar.Location = new System.Drawing.Point(43, 76);
             this.BotonBuscar.Name = "BotonBuscar";
             this.BotonBuscar.Size = new System.Drawing.Size(92, 41);
             this.BotonBuscar.TabIndex = 2;
@@ -134,23 +139,29 @@ namespace Parcial1_ap1_20180240
             this.BotonBuscar.TextAlign = System.Drawing.ContentAlignment.MiddleRight;
             this.BotonBuscar.UseVisualStyleBackColor = true;
             // 
-            // NumeroCiudad
+            // NumericUpDown
             // 
-            this.NumeroCiudad.Location = new System.Drawing.Point(6, 79);
-            this.NumeroCiudad.Name = "NumeroCiudad";
-            this.NumeroCiudad.Size = new System.Drawing.Size(130, 23);
-            this.NumeroCiudad.TabIndex = 1;
+            this.NumericUpDown.Location = new System.Drawing.Point(6, 87);
+            this.NumericUpDown.Name = "NumericUpDown";
+            this.NumericUpDown.Size = new System.Drawing.Size(31, 23);
+            this.NumericUpDown.TabIndex = 8;
+            // 
+            // errorProvider1
+            // 
+            this.errorProvider1.ContainerControl = this;
             // 
             // RegistroCiudad
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(380, 308);
+            this.ClientSize = new System.Drawing.Size(373, 308);
             this.Controls.Add(this.groupBox1);
             this.Name = "RegistroCiudad";
             this.Text = "Registro de Ciudades";
             this.groupBox1.ResumeLayout(false);
             this.groupBox1.PerformLayout();
+            ((System.ComponentModel.ISupportInitialize)(this.NumericUpDown)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.errorProvider1)).EndInit();
             this.ResumeLayout(false);
 
         }
@@ -165,7 +176,8 @@ namespace Parcial1_ap1_20180240
         private System.Windows.Forms.TextBox NombreCiudad;
         private System.Windows.Forms.Label label2;
         private System.Windows.Forms.Button BotonBuscar;
-        private System.Windows.Forms.TextBox NumeroCiudad;
+        private System.Windows.Forms.NumericUpDown NumericUpDown;
+        private System.Windows.Forms.ErrorProvider errorProvider1;
     }
 }
 
