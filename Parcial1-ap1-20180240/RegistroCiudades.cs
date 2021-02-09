@@ -21,5 +21,10 @@ namespace Parcial1_ap1_20180240
         {
 
         }
+
+        private void BotonGuardar_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
