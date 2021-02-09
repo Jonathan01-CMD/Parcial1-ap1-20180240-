@@ -10,12 +10,16 @@ using System.Windows.Forms;
 
 namespace Parcial1_ap1_20180240
 {
-    public partial class Form1 : Form
+    public partial class RegistroCiudad : Form
     {
-        public Form1()
+        public RegistroCiudad()
         {
             InitializeComponent();
         }
 
+        private void label1_Click(object sender, EventArgs e)
+        {
+
+        }
     }
 }
